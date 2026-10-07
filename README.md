@@ -286,3 +286,174 @@ As the capacitors charge, their voltages add together, resulting in a higher out
 ![Voltage Multiplier Waveforms](https://github.com/nawazhussainhs/Marvel_Level_1_Images/blob/main/VTG_MUL_GRAPH.png?raw=true)
 
 ---
+
+## **Task 05** - The Power Shuffle: Buck-Boost Edition
+
+### Objective
+To understand the working of DC-DC converters and design Buck and Boost converters using LTSpice.
+
+---
+
+### Task
+1. Design a Boost Converter to step up 1.5V DC to 5V DC.
+2. Design a Buck Converter to step down 12V DC to 5V DC.
+3. Simulate both circuits in LTSpice and observe the output voltage.
+
+Platform Used: LTSpice
+
+---
+
+### Theory
+DC-DC converters are switching circuits used to convert one DC voltage level into another.
+
+A Boost Converter increases the input voltage to a higher output voltage. It mainly consists of an inductor, switch, diode, and capacitor. When the switch is ON, energy is stored in the inductor. When the switch turns OFF, the inductor releases its stored energy through the diode to the capacitor and load, increasing the output voltage.
+
+A Buck Converter works in the opposite way and reduces a higher DC input voltage to a lower DC output voltage. The switch continuously turns ON and OFF, and the average output voltage depends mainly on the duty cycle of the switching waveform.
+
+---
+
+### Boost Converter
+
+The Boost Converter was designed to increase the input voltage from 1.5V to approximately 5V.
+
+For an ideal Boost Converter,
+
+Vout = Vin / (1 - D)
+
+where,
+
+D = Duty Cycle
+
+Rearranging,
+
+D = 1 - (Vin / Vout)
+
+For Vin = 1.5V and Vout = 5V,
+
+D = 1 - (1.5 / 5)
+
+D = 0.7
+
+Therefore, the required duty cycle is approximately 70%.
+
+---
+
+### Buck Converter
+
+The Buck Converter was designed to decrease the input voltage from 12V to approximately 5V.
+
+For an ideal Buck Converter,
+
+Vout = D × Vin
+
+Therefore,
+
+D = Vout / Vin
+
+For Vin = 12V and Vout = 5V,
+
+D = 5 / 12
+
+D ≈ 0.417
+
+Therefore, the required duty cycle is approximately 41.7%.
+
+---
+
+### Components Used
+- MOSFET as switching device
+- Inductor
+- Diode
+- Capacitor
+- Resistors
+- DC Voltage Source
+- Pulse Source / 555 Timer switching source
+
+---
+
+### Procedure
+1. Calculated the required duty cycle for both the Buck and Boost converters.
+2. Designed the Boost Converter using an inductor, MOSFET, diode, and capacitor.
+3. Applied a 1.5V DC input and adjusted the switching waveform to obtain approximately 5V at the output.
+4. Designed the Buck Converter using the same basic switching components.
+5. Applied a 12V DC input and adjusted the duty cycle to obtain approximately 5V at the output.
+6. Performed transient analysis in LTSpice.
+7. Observed the switching waveform and output voltage for both converters.
+8. Tested the switching circuit using both a PULSE source and a 555 Timer based signal.
+
+---
+
+### Observation With 555 Timer
+While testing the switching source, I noticed a difference between the LTSpice PULSE source and the 555 Timer output.
+
+The PULSE source was configured to start from LOW and then switch to HIGH.
+
+However, the 555 Timer output started from HIGH when the simulation began.
+
+This happens because at power-on the timing capacitor of the 555 Timer is initially discharged. Its voltage is below 1/3 of Vcc, which sets the internal latch and makes the output HIGH.
+
+Because of this, the switching waveform generated using the 555 Timer started in the HIGH state, whereas the PULSE source started from the LOW state.
+
+If a LOW output is required at the beginning of the simulation, the RESET pin can be kept LOW briefly during startup or the timing capacitor can be given an initial voltage using the `.ic` directive in LTSpice.
+
+---
+
+### Results
+- Successfully simulated a Boost Converter with an input of 1.5V and an output close to 5V.
+- Successfully simulated a Buck Converter with an input of 12V and an output close to 5V.
+- Observed the effect of duty cycle on the output voltage.
+- Compared the switching behaviour of a PULSE source and a 555 Timer based clock source.
+- Observed that the 555 Timer naturally starts with its output HIGH during power-on.
+
+---
+
+### Learning Outcomes
+- Understood the working principle of Buck and Boost converters.
+- Learned how energy is stored and released by an inductor in switching converters.
+- Understood the relationship between duty cycle and output voltage.
+- Learned how MOSFETs are used as high-speed switches in DC-DC converters.
+- Gained experience in transient analysis using LTSpice.
+- Understood the difference between an ideal PULSE source and the startup behaviour of a practical 555 Timer circuit.
+
+---
+
+### Boost Converter Circuit
+
+![Boost Converter Circuit](https://github.com/nawazhussainhs/Marvel_Level_1_Images/blob/main/Boost_converter.png?raw=true)
+
+---
+
+### Boost Converter Output
+
+![Boost Converter Output](https://github.com/nawazhussainhs/Marvel_Level_1_Images/blob/main/Boost_WF.png?raw=true)
+
+---
+
+### Buck Converter Circuit
+
+![Buck Converter Circuit](https://github.com/nawazhussainhs/Marvel_Level_1_Images/blob/main/Buck_NMOS.png?raw=true)
+
+---
+
+### Buck Converter Output
+
+![Buck Converter Output](https://github.com/nawazhussainhs/Marvel_Level_1_Images/blob/main/Buck_WF.png?raw=true)
+
+---
+
+### Buck Converter Circuit (555 Timer Based Switching Source)
+
+![Buck Converter Circuit](https://github.com/nawazhussainhs/Marvel_Level_1_Images/blob/main/Buck_555.png?raw=true)
+
+---
+
+### Buck Converter Output Waveform
+
+![Buck Converter Output](https://github.com/nawazhussainhs/Marvel_Level_1_Images/blob/main/Buck_555_WF.png?raw=true)
+
+---
+
+### Conclusion
+The Buck and Boost converters were successfully designed and simulated in LTSpice. The Boost Converter increased the 1.5V input to approximately 5V, while the Buck Converter reduced the 12V input to approximately 5V. The simulations also helped in understanding the importance of duty cycle and the switching behaviour of the circuit. While testing the switching sources, a difference in startup behaviour was observed between the LTSpice PULSE source and the 555 Timer, with the 555 Timer starting in the HIGH state due to the initially discharged timing capacitor.
+
+---
