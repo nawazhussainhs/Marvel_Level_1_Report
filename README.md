@@ -546,7 +546,7 @@ Control lines are used to select the desired operation, making the ALU a program
 
 ---
 
-### ALU Intermediate Design
+### ALU Design (Using 2 Select Lines)
 
 ![ALU Stage 2](https://raw.githubusercontent.com/nawazhussainhs/Marvel_Level_1_Images/main/ALU_2_SL.png)
 
