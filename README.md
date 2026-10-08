@@ -456,4 +456,173 @@ If a LOW output is required at the beginning of the simulation, the RESET pin ca
 ### Conclusion
 The Buck and Boost converters were successfully designed and simulated in LTSpice. The Boost Converter increased the 1.5V input to approximately 5V, while the Buck Converter reduced the 12V input to approximately 5V. The simulations also helped in understanding the importance of duty cycle and the switching behaviour of the circuit. While testing the switching sources, a difference in startup behaviour was observed between the LTSpice PULSE source and the 555 Timer, with the 555 Timer starting in the HIGH state due to the initially discharged timing capacitor.
 
+---  
+
+## **Task 06** - 4 Bits to Rule Them All
+
+### Objective
+To design and implement a 4-bit Arithmetic Logic Unit (ALU) capable of performing arithmetic and logical operations using basic digital logic components in CircuitVerse.
+
 ---
+
+### Tools Used
+- CircuitVerse
+- Digital Logic Design Concepts
+
+---
+
+### Task
+Design and implement a 4-bit ALU capable of performing:
+
+1. 4-bit Addition
+2. 4-bit Subtraction using 2's Complement
+3. 4-bit AND Operation
+4. 4-bit OR Operation
+5. 4-bit XOR Operation
+6. 4-bit NOT Operation (Bonus)
+
+The ALU should use control signals to select the required operation and display the corresponding output.
+
+---
+
+### Theory
+
+An Arithmetic Logic Unit (ALU) is the computational core of a digital system. It performs arithmetic and logical operations on binary data.
+
+A 4-bit ALU accepts two 4-bit inputs and processes them based on control signals. Arithmetic operations such as addition and subtraction are performed using adder circuits, while logical operations are implemented using logic gates.
+
+Subtraction is achieved using the 2's complement method, where the second operand is inverted and a carry of 1 is added. This allows subtraction to be performed using the same adder hardware used for addition.
+
+Control lines are used to select the desired operation, making the ALU a programmable combinational circuit.
+
+---
+
+### Procedure
+
+1. Designed a 4-bit ripple carry adder using Full Adders.
+2. Verified correct carry propagation and arithmetic addition.
+3. Modified the adder circuit to perform subtraction using the 2's complement technique.
+4. Implemented 4-bit AND, OR, XOR and NOT circuits using logic gates.
+5. Designed multiplexing logic to select the required operation based on control signals.
+6. Combined all arithmetic and logical blocks into a single ALU architecture.
+7. Tested all possible operations with different input combinations.
+8. Verified outputs for correctness.
+
+---
+
+### Individual Functional Blocks
+
+<table>
+<tr>
+<td><img src="https://raw.githubusercontent.com/nawazhussainhs/Marvel_Level_1_Images/main/4_BIT_ADD.png" width="300"></td>
+<td><img src="https://raw.githubusercontent.com/nawazhussainhs/Marvel_Level_1_Images/main/4_BIT_ADD_SUB.png" width="300"></td>
+</tr>
+
+<tr>
+<td align="center">4-Bit Adder</td>
+<td align="center">4-Bit Adder/Subtractor</td>
+</tr>
+
+<tr>
+<td><img src="https://raw.githubusercontent.com/nawazhussainhs/Marvel_Level_1_Images/main/4_BIT_AND.png" width="300"></td>
+<td><img src="https://raw.githubusercontent.com/nawazhussainhs/Marvel_Level_1_Images/main/4_BIT_OR.png" width="300"></td>
+</tr>
+
+<tr>
+<td align="center">4-Bit AND</td>
+<td align="center">4-Bit OR</td>
+</tr>
+
+<tr>
+<td><img src="https://raw.githubusercontent.com/nawazhussainhs/Marvel_Level_1_Images/main/4_BIT_XOR.png" width="300"></td>
+<td><img src="https://raw.githubusercontent.com/nawazhussainhs/Marvel_Level_1_Images/main/4_BIT_NOT.png" width="300"></td>
+</tr>
+
+<tr>
+<td align="center">4-Bit XOR</td>
+<td align="center">4-Bit NOT</td>
+</tr>
+</table>
+
+---
+
+### ALU Intermediate Design
+
+![ALU Stage 2](https://raw.githubusercontent.com/nawazhussainhs/Marvel_Level_1_Images/main/ALU_2_SL.png)
+
+---
+
+### Final 4-Bit ALU
+
+![Final ALU](https://raw.githubusercontent.com/nawazhussainhs/Marvel_Level_1_Images/main/ALU_3_SL.png)
+
+---
+  
+### Sample Verification Table
+
+For testing the ALU, the following inputs were used:
+
+| Input A | Input B |
+|----------|----------|
+| 1011 | 0110 |
+
+| Select Lines | Operation | Output |
+|-------------|-----------|---------|
+| 000 | Addition (A + B) | 0001 (Carry = 1) |
+| 001 | Subtraction (A - B) | 0101 |
+| 010 | AND | 0010 |
+| 011 | OR | 1111 |
+| 100 | XOR | 1101 |
+| 101 | NOT A | 0100 |
+
+The obtained outputs matched the expected results for all tested operations.  
+  
+---  
+
+### Working
+
+- The 4-bit adder performs binary addition of two 4-bit inputs.
+- The subtractor uses XOR gates and a carry-in of 1 to generate the 2's complement of the second operand.
+- AND, OR and XOR blocks perform bitwise logical operations.
+- The NOT block inverts each bit of the selected input.
+- Control lines determine which operation output is routed to the final ALU output.
+- The ALU produces the required result while also handling carry generation during arithmetic operations.
+
+---
+
+### Results
+
+- Successfully designed a 4-bit Adder.
+- Successfully implemented a 4-bit Adder/Subtractor using 2's complement.
+- Successfully implemented 4-bit AND, OR and XOR logic operations.
+- Successfully implemented 4-bit NOT operation.
+- Successfully integrated all functional blocks into a single ALU architecture.
+- Verified correct operation through simulation and testing in CircuitVerse.
+- Verified ALU functionality using test inputs A = 1011 and B = 0110 for all supported operations.
+
+---
+
+### Learning Outcomes
+
+- Understood the architecture of an ALU.
+- Learned how arithmetic operations are implemented using Full Adders.
+- Understood subtraction using the 2's complement method.
+- Learned implementation of bitwise logical operations.
+- Gained experience in hierarchical digital circuit design.
+- Learned how control signals are used to select ALU operations.
+- Improved understanding of combinational logic system design.
+
+---
+  
+### CircuitVerse Project
+
+CircuitVerse Project Link:
+
+[View 4-Bit ALU Project](https://circuitverse.org/users/468542/projects/arithmetic-logic-unit-68bc0793-3dd8-4d7c-bd84-a7188b9f7a7c)  
+  
+---
+  
+
+### Conclusion
+
+A fully functional 4-bit ALU was successfully designed and implemented in CircuitVerse. The ALU performs arithmetic operations such as addition and subtraction along with logical operations including AND, OR, XOR and NOT. The project provided practical exposure to digital circuit design, control logic implementation and modular system integration.
