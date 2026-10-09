@@ -625,4 +625,98 @@ CircuitVerse Project Link:
 
 ### Conclusion
 
-A fully functional 4-bit ALU was successfully designed and implemented in CircuitVerse. The ALU performs arithmetic operations such as addition and subtraction along with logical operations including AND, OR, XOR and NOT. The project provided practical exposure to digital circuit design, control logic implementation and modular system integration.
+A fully functional 4-bit ALU was successfully designed and implemented in CircuitVerse. The ALU performs arithmetic operations such as addition and subtraction along with logical operations including AND, OR, XOR and NOT. The project provided practical exposure to digital circuit design, control logic implementation and modular system integration. 
+
+---
+
+## **Task 07** - Your Logic, Preloaded
+
+### Objective
+To understand the concept of Look-Up Tables (LUTs) and implement a 2-input XOR function using a 4×1 LUT.
+
+---
+
+### Tools Used
+- CircuitVerse
+- Digital Logic Design Concepts
+
+---
+
+### Theory
+A Look-Up Table (LUT) is a digital circuit that stores predefined output values. The input bits act as select lines to choose one of the stored values.
+
+A 4×1 LUT has four data inputs and one output. Since two select bits can represent four different combinations, the LUT can implement a 2-input XOR function by storing the corresponding truth table outputs.
+
+---
+
+### Truth Table
+
+The truth table for a 2-input XOR function is:
+
+| Input A | Input B | XOR Output |
+|---------|---------|------------|
+| 0       | 0       | 0          |
+| 0       | 1       | 1          |
+| 1       | 0       | 1          |
+| 1       | 1       | 0          |
+
+The LUT data inputs are configured according to the truth table:
+
+- D0 = 0
+- D1 = 1
+- D2 = 1
+- D3 = 0
+
+---
+
+### Procedure
+1. Created the truth table for the 2-input XOR function.
+2. Configured the 4×1 LUT with outputs `0, 1, 1, 0`.
+3. Connected the two input bits to the select lines.
+4. Tested all four input combinations and verified the outputs.
+
+---
+
+### Working
+The two input bits select one of the four stored data values.
+
+- When A = 0 and B = 0, the output is 0.
+- When A = 0 and B = 1, the output is 1.
+- When A = 1 and B = 0, the output is 1.
+- When A = 1 and B = 1, the output is 0.
+
+The LUT produces the XOR output by selecting the appropriate stored value based on the input combination.
+
+---
+
+### Results
+The 4×1 LUT was configured to implement the 2-input XOR function. All four input combinations were tested, and the outputs matched the XOR truth table.
+
+---
+
+### LUT Circuit
+
+![4x1 LUT XOR Circuit](https://github.com/nawazhussainhs/Marvel_Level_1_Images/blob/main/LUT.png?raw=true)
+
+---
+
+### Learning Outcomes
+- Understood the basic concept of Look-Up Tables.
+- Learned how select lines choose stored output values.
+- Implemented a 2-input XOR function using a 4×1 LUT.
+- Understood how a truth table can be used to configure a LUT.
+
+---
+
+### Applications
+- Implementing combinational logic functions.
+- Configurable logic in Field-Programmable Gate Arrays (FPGAs).
+- Digital signal processing.
+- Implementing Boolean functions in digital circuits.
+
+---
+
+### Conclusion
+This task helped me understand the working of Look-Up Tables and how they can implement logic functions using stored output values. By configuring a 4×1 LUT for the XOR function, I learned how input combinations select the required output according to a truth table.
+
+---
