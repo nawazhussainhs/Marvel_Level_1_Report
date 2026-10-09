@@ -554,7 +554,7 @@ Control lines are used to select the desired operation, making the ALU a program
 
 ### Final 4-Bit ALU
 
-![Final ALU](https://github.com/nawazhussainhs/Marvel_Level_1_Images/blob/main/ALU_3SL_CFLAGS.png?raw=true)
+![Final ALU](https://github.com/nawazhussainhs/Marvel_Level_1_Images/blob/main/ALU_3SL&FLAG.png?raw=true)
 
 ---
   
