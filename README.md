@@ -110,6 +110,69 @@ AND and OR gates are basic combinational logic circuits that can be implemented 
 ![standard circuits](https://github.com/nawazhussainhs/Marvel_Level_1_Images/blob/main/standard_ckts_detailed.png?raw=true)        
 
 --- 
+
+---
+
+### SPICE Code for Logic Gates
+
+<table>
+<tr>
+<td width="33%" align="center">
+
+**MOS Inverter**
+
+<img src="https://raw.githubusercontent.com/nawazhussainhs/Marvel_Level_1_Images/main/MOS_INVERTER.png" width="100%">
+
+</td>
+<td width="33%" align="center">
+
+**AND Gate**
+
+<img src="https://raw.githubusercontent.com/nawazhussainhs/Marvel_Level_1_Images/main/AND_SC.png" width="100%">
+
+</td>
+<td width="33%" align="center">
+
+**OR Gate**
+
+<img src="https://raw.githubusercontent.com/nawazhussainhs/Marvel_Level_1_Images/main/OR_SC.png" width="100%">
+
+</td>
+</tr>
+</table>
+
+---
+
+### Simulation Waveforms
+
+<table>
+<tr>
+<td width="33%" align="center">
+
+**MOS Inverter Output**
+
+<img src="https://raw.githubusercontent.com/nawazhussainhs/Marvel_Level_1_Images/main/MOS_INVERTER_WF.png" width="100%">
+
+</td>
+<td width="33%" align="center">
+
+**AND Gate Output**
+
+<img src="https://raw.githubusercontent.com/nawazhussainhs/Marvel_Level_1_Images/main/AND_WF.png" width="100%">
+
+</td>
+<td width="33%" align="center">
+
+**OR Gate Output**
+
+<img src="https://raw.githubusercontent.com/nawazhussainhs/Marvel_Level_1_Images/main/OR_WF.png" width="100%">
+
+</td>
+</tr>
+</table>
+
+---
+
 ## **Task 03** - Cut, Pass, Repeat
 
 ### Objective
