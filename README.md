@@ -203,7 +203,7 @@ The operational amplifier provides amplification and isolation between the filte
 
 ### Design Specifications
 - Lower Cut-off Frequency (fL) = 4 kHz
-- Upper Cut-off Frequency (fH) = 16 kHz
+- Upper Cut-off Frequency (fH) = 10 kHz
 - Capacitor Value = 10 nF
 - Filter Type = Second Order Active Band Pass Filter
 
