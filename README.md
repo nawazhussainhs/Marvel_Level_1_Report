@@ -223,9 +223,9 @@ For the Low Pass Filter:
 
 R₂ = 1 / (2πfHC)
 
-R₂ = 1 / (2π × 16000 × 10 × 10⁻⁹)
+R₂ = 1 / (2π × 10000 × 10 × 10⁻⁹)
 
-R₂ ≈ 1 kΩ
+R₂ ≈ 1.59 kΩ
 
 Standard resistor values were selected for practical implementation.
 
