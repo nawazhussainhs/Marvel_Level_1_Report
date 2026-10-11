@@ -917,4 +917,72 @@ The three-input odd-parity function was represented using PAL and PLA structures
 ### Conclusion
 This task helped me understand how PAL and PLA devices implement combinational logic using programmable arrays. By designing an odd-parity circuit and preparing the fuse tables, I learned how product terms are generated and combined to obtain the required output. The smart-home controller demonstrated a practical application of programmable logic.
 
+--- 
+
+## **Task 09** - The PCB Revolution
+
+### Objective
+To learn the basics of PCB designing using KiCad and understand the process of converting a circuit schematic into a routed PCB layout.
+
+---
+
+### Tools Used
+- KiCad 10.0.1
+
+---
+
+### Procedure
+1. Created the circuit schematic and assigned footprints to the components.
+2. Transferred the design to the PCB Editor and arranged the components.
+3. Created the PCB layout and routed the connections.
+4. Checked the unrouted and routed layouts and viewed the final PCB in 3D.
+
+---
+
+### PCB Schematic
+
+![Buck PCB Schematic](https://raw.githubusercontent.com/nawazhussainhs/Marvel_Level_1_Images/main/Buck_pcb_schematic.png)
+
+---
+
+### PCB Layout
+
+<table>
+<tr>
+<td width="50%" align="center">
+
+**Unrouted PCB**
+
+<img src="https://raw.githubusercontent.com/nawazhussainhs/Marvel_Level_1_Images/main/Buck_pcb_unrouted.png" width="100%">
+
+</td>
+<td width="50%" align="center">
+
+**Routed PCB**
+
+<img src="https://raw.githubusercontent.com/nawazhussainhs/Marvel_Level_1_Images/main/Buck_pcb_routed.png" width="100%">
+
+</td>
+</tr>
+</table>
+
+---
+
+### 3D PCB View
+
+![Buck PCB 3D View](https://raw.githubusercontent.com/nawazhussainhs/Marvel_Level_1_Images/main/Buck_pcb_3D.png)
+
+---
+
+### Learning Outcomes
+- Understood the workflow from schematic design to PCB layout.
+- Learned component placement and track routing.
+- Understood the difference between unrouted and routed PCBs.
+- Explored the 3D view of the PCB in KiCad.
+
+---
+
+### Conclusion
+This task helped me understand the basic PCB design workflow in KiCad, from creating the schematic to routing the PCB and inspecting its 3D representation.
+
 ---
