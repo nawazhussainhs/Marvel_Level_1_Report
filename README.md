@@ -234,7 +234,7 @@ Standard resistor values were selected for practical implementation.
 ### Procedure
 1. Calculated resistor values using the cut-off frequency equations.
 2. Designed the High Pass Filter section for a cut-off frequency of 4 kHz.
-3. Designed the Low Pass Filter section for a cut-off frequency of 16 kHz.
+3. Designed the Low Pass Filter section for a cut-off frequency of 10 kHz.
 4. Combined both stages using an operational amplifier.
 5. Simulated the circuit in LTSpice.
 6. Performed AC analysis to obtain the frequency response.
@@ -244,7 +244,7 @@ Standard resistor values were selected for practical implementation.
 
 ### Results
 - Successfully designed a second-order active Band Pass Filter.
-- Obtained the required pass band between 4 kHz and 16 kHz.
+- Obtained the required pass band between 4 kHz and 10 kHz.
 - Verified filter operation through LTSpice simulation.
 - Observed attenuation of frequencies outside the desired pass band.
 
